@@ -4,6 +4,8 @@ include $(CLEAR_VARS)
 
 LOCAL_ARM_MODE := arm
 
+LOCAL_MODULE_TAGS := optional
+
 LOCAL_SRC_FILES:= \
 	dspexec.c
 

@@ -4,6 +4,8 @@ include $(CLEAR_VARS)
 
 LOCAL_PRELINK_MODULE := false
 
+LOCAL_MODULE_TAGS := optional
+
 LOCAL_SRC_FILES:= \
 	src/OMX_VideoDec_Thread.c		\
 	src/OMX_VideoDec_Utils.c		\

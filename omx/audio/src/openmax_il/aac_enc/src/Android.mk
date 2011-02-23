@@ -4,6 +4,8 @@ include $(CLEAR_VARS)
 
 LOCAL_PRELINK_MODULE := false
 
+LOCAL_MODULE_TAGS := optional
+
 LOCAL_SRC_FILES:= \
 	OMX_AacEnc_CompThread.c		\
 	OMX_AacEnc_Utils.c		\

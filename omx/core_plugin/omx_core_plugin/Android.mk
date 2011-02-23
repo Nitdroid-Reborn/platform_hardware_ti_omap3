@@ -2,6 +2,7 @@ ifneq ($(BUILD_WITHOUT_PV),true)
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_PRELINK_MODULE := false
+LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := src/ti_omx_interface.cpp
 
 LOCAL_MODULE := libVendor_ti_omx

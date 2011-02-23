@@ -5,6 +5,8 @@ include $(CLEAR_VARS)
 
 LOCAL_PRELINK_MODULE := false
 
+LOCAL_MODULE_TAGS := optional
+
 LOCAL_SRC_FILES:= \
 	OMX_WbAmrDec_ComponentThread.c \
 	OMX_WbAmrDec_Utils.c \
