@@ -7,7 +7,10 @@ LOCAL_SRC_FILES := \
 LOCAL_CFLAGS := $(PV_CFLAGS_MINUS_VISIBILITY)
 
 LOCAL_C_INCLUDES:= \
-        $(TOP)/frameworks/base/include/media/stagefright/openmax
+        frameworks/native/include \
+        frameworks/native/include/media/hardware \
+        frameworks/av/include \
+        $(LOCAL_PATH)/../omx/system/src/openmax_il/omx_core/inc
 
 LOCAL_SHARED_LIBRARIES :=       \
         libbinder               \
@@ -15,6 +18,7 @@ LOCAL_SHARED_LIBRARIES :=       \
         libcutils               \
         libui                   \
         libdl                   \
+        libstagefright_foundation
 
 LOCAL_MODULE := libstagefrighthw
 

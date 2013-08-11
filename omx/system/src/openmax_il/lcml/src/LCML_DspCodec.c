@@ -1603,7 +1603,7 @@ OMX_ERRORTYPE FreeResources (LCML_DSP_INTERFACE *hInterface)
                 codec->g_aNotificationObjects[2] = NULL;
             }
  #endif
-            OMX_DBG_CLOSE((struct OMX_TI_Debug )(((LCML_CODEC_INTERFACE*)hInterface->pCodecinterfacehandle)->dbg));
+            //OMX_DBG_CLOSE((struct OMX_TI_Debug )(((LCML_CODEC_INTERFACE*)hInterface->pCodecinterfacehandle)->dbg));
             LCML_FREE(((LCML_CODEC_INTERFACE*)hInterface->pCodecinterfacehandle));
             hInterface->pCodecinterfacehandle = NULL;
         }
@@ -1856,7 +1856,7 @@ void* MessagingThread(void* arg)
                             status = DSPProcessor_InvalidateMemory(hDSPInterface->dspCodec->hProc,
                                             tmpDspStructAddress, sizeof(TArmDspCommunicationStruct));
                             if (DSP_FAILED(status)) {
-                                LOGE("Invalidate for communication structure failed. status = 0x%x\n", status);
+                                ALOGE("Invalidate for communication structure failed. status = 0x%x\n", status);
                             }
 
                             // Only invalidate the memory when the pointer points to some valid memory region
@@ -1865,7 +1865,7 @@ void* MessagingThread(void* arg)
                                 status = DSPProcessor_InvalidateMemory(hDSPInterface->dspCodec->hProc,
                                                 tmpDspStructAddress->iArmParamArg, tmpDspStructAddress->iParamSize);
                                 if (DSP_FAILED(status)) {
-                                    LOGE("Invalidate for arm parameter arguments failed. status = 0x%x\n", status);
+                                    ALOGE("Invalidate for arm parameter arguments failed. status = 0x%x\n", status);
                                 }
                             }
 
